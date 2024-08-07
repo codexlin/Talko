@@ -74,3 +74,9 @@
     @apply bg-background text-foreground;
   }
 }
+/* Custom styles for glassmorphism effect */
+.backdrop-blur-lg {
+  backdrop-filter: blur(10px);
+}
+
+
