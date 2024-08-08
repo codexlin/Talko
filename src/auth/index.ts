@@ -1,7 +1,8 @@
+
 import NextAuth, { NextAuthConfig, User } from "next-auth"
 import Credentials from "next-auth/providers/credentials"
 
-export const BASE_PATH = "api/auth"
+// export const BASE_PATH = "api/auth"
 const authOptions: NextAuthConfig = {
   providers: [
     Credentials({
@@ -33,7 +34,7 @@ const authOptions: NextAuthConfig = {
       },
     }),
   ],
-  basePath: BASE_PATH,
+  // basePath: BASE_PATH,
   secret: process.env.NEXTAUTH_SECRET,
 }
 export const { handlers, auth, signIn, signOut } = NextAuth(authOptions)
