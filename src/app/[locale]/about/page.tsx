@@ -1,6 +1,5 @@
-import { useTranslations } from "next-intl"
-
-export default function About() {
-  const t = useTranslations()
-  return <span>{t("General.add")}</span>
+import {auth} from '@/auth'
+export default async function About() {
+  const user  =await auth()
+  return <pre>{JSON.stringify(user)}</pre>
 }

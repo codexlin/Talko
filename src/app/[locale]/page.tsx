@@ -10,6 +10,7 @@ import { ModeToggle } from "@/components/mode-toggle"
 
 export default function Home() {
   const t = useTranslations("General")
+  const SIGN_IN ="/api/auth/signin"
   return (
     <main className="flex h-screen items-center justify-center">
       <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
@@ -22,8 +23,7 @@ export default function Home() {
         </p>
         <div className="flex gap-2">
           <Link
-            href={siteConfig.links.github}
-            target="_blank"
+            href={SIGN_IN}
             className={cn(buttonVariants({ size: "default" }))}
           >
             {t("start")}
